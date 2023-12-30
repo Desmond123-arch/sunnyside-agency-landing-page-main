@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+}
+
+header {
+    background: no-repeat url('./images/desktop/image-header.jpg');
+    overflow: hidden;
+    background-position: center bottom;
+    background-size: cover;
+    height: 85vh;
+}
+
+nav {
+    display: flex;
+    height: max-content;
+    margin: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    align-self: last baseline;
+}
+
+nav ul li {
+    margin: 1em;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.banner {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Fraunces', serif;
+    width: 60%;
+    margin: auto;
+}
+
+#message {
+    font-size: 5rem;
+    margin: 0.2em;
+}
+
+main {
+    width: 100%;
+    background-color: gray;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 2px solid salmon;
+    background-color: aqua;
+}
+
+.item {
+    min-width: 100%;
+    height: max-content;
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    width: 50%;
+    background-color: gray;
+}
+
+.content {
+    width: 50%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.features{
+    display: flex;
+}
+.cherry, .orange{
+    height: 70vh;
+}
+.cherry{
+    background-image: url('./images/desktop/image-graphic-design.jpg');
+    background-size: cover;
+    background-position: center top;
+    width: 50%;
+    margin: auto;
+}
+.orange{
+    background-image: url('./images/desktop/image-photography.jpg');
+    background-size: cover;
+    background-position: center top;
+    width: 50%;
+    margin: auto;
+}
+.testimonials {
+    height: max-content;
+    flex: 1;
+    background-color: blueviolet;
+}
+
+.testimonials .customers {
+    display: flex;
+}
+/* Media query to set children of .item to block */
+@media (max-width: 600px) {
+    .item > div, .cherry, .orange {
+        width: 100%; /* Set width to 100% for block layout */
+    }
+
+    .content{
+        height: 60vh;
+    }
+    .testimonials .customers {
+        display: block;
+    }
+    .testimonials {
+        height: max-content;
+        flex: 1;
+        background-color: rgb(180, 226, 43);
+    }
+}
+.attribution { 
+    font-size: 1rem; 
+    text-align: center;
+ }
+.attribution a {
+     color: hsl(228, 45%, 44%);
+}
+footer{
+    background-color: rgb(241, 241, 25);
+}
+ul.socials li img:hover {
+    background-color: white;
+}
+.image_gallery {
+    width: 100%;
+    height: 50%;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image_gallery .image {
+    width: 25%;
+}
+
+.image_gallery .image img {
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.center ul{
+    display: flex;
+    list-style: none;
+    gap: 1.5em;
+}
+.center ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .image_gallery .image {
+        width: 50%;
+    }
+}
