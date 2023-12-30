@@ -234,7 +234,7 @@ main {
     color: hsl(210, 4%, 67%);
 }
 /* Media query to set children of .item to block */
-@media (max-width: 375px) {
+@media (max-width: 800px) {
     .item > div, .cherry, .orange {
         width: 100%; /* Set width to 100% for block layout */
     }
